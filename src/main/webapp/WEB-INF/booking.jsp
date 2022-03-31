@@ -52,7 +52,7 @@
                         <div class="modal-body">
                             Vil du booke plads til sauna på ${item.address}?
 
-                            <form action="/confirmation">
+                            <form action="ServletConfirmation" method="post">
                                 <label for="name">Navn:</label><br>
                                 <input type="text" id="name" name="name" placeholder="navn"><br>
                                 <label for="email">E-mail adresse:</label><br>
@@ -60,7 +60,8 @@
                                 <label for="mobile">Mobil nr:</label><br>
                                 <input type="text" id="mobile" name="mobile" placeholder="mobilnr"><br><br>
                                 <br>
-                                <button type="button" type="submit" class="btn btn-primary">Confirm</button>
+                                <input type="submit" type="submit" value="Confirm" class="btn btn-primary" ></input>
+
                             </form>
                         </div>
 
