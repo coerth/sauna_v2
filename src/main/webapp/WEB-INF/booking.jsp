@@ -54,12 +54,13 @@
 
                             <form action="ServletConfirmation" method="post">
                                 <label for="name">Navn:</label><br>
-                                <input type="text" id="name" name="name" placeholder="navn"><br>
+                                <input type="text" id="name" name="name" placeholder="navn" required><br>
                                 <label for="email">E-mail adresse:</label><br>
-                                <input type="text" id="email" name="email" placeholder="email"><br>
+                                <input type="text" id="email" name="email" placeholder="email" required><br>
                                 <label for="mobile">Mobil nr:</label><br>
-                                <input type="text" id="mobile" name="mobile" placeholder="mobilnr"><br><br>
+                                <input type="text" id="mobile" name="mobile" placeholder="mobilnr" required><br><br>
                                 <br>
+                                <input type="hidden" name="saunaevent" value="${item.eventID}" />
                                 <input type="submit" type="submit" value="Confirm" class="btn btn-primary" ></input>
 
                             </form>

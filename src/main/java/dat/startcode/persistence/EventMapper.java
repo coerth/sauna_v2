@@ -55,4 +55,40 @@ public class EventMapper implements IEventMapper {
         return eventArrayList;
 
     }
+
+    public SaunaEvent getEvent(int EnteredEventID) throws DatabaseException {
+
+        Logger.getLogger("web").log(Level.INFO, "");
+
+        SaunaEvent saunaEvent = null;
+
+
+        try (Connection connection = connectionPool.getConnection())
+        {
+            String sql ="select * from events_view WHERE event_id = ?";
+            try(PreparedStatement ps=connection.prepareStatement(sql))
+            {
+                ps.setInt(1, EnteredEventID);
+                ResultSet rs = ps.executeQuery();
+                while(rs.next()) {
+                    int eventID = rs.getInt("event_id");
+                    String starttime = rs.getString("start_time");
+                    int duration = rs.getInt("duration");
+                    int price = rs.getInt("price");
+                    int participants = rs.getInt("participants");
+                    String address = rs.getString("address");
+
+                    saunaEvent = new SaunaEvent(eventID, starttime,duration,price,participants,address);
+                }
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+
+        } catch (SQLException ex) {
+            throw new DatabaseException(ex, "Det var ikke den rigtige database");
+        }
+        return saunaEvent;
+
+    }
+
 }

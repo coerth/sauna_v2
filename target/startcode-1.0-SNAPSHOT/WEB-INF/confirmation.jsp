@@ -19,6 +19,8 @@
         Navn: ${requestScope.get("name")}<br>
         E-mail: ${requestScope.get("email")}<br>
         Mobil nummer: ${requestScope.get("mobile")}<br>
+        <br>
+        Husk at dit sauna event er på ${requestScope.saunaevent.address}
 
 
     </jsp:body>
