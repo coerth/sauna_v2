@@ -50,11 +50,22 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            Hej, kan jeg se det her ?
+                            Vil du booke plads til sauna på ${item.address}?
+
+                            <form action="/confirmation">
+                                <label for="name">Navn:</label><br>
+                                <input type="text" id="name" name="name" placeholder="navn"><br>
+                                <label for="email">E-mail adresse:</label><br>
+                                <input type="text" id="email" name="email" placeholder="email"><br>
+                                <label for="mobile">Mobil nr:</label><br>
+                                <input type="text" id="mobile" name="mobile" placeholder="mobilnr"><br><br>
+                                <br>
+                                <button type="button" type="submit" class="btn btn-primary">Confirm</button>
+                            </form>
                         </div>
+
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                 </div>
