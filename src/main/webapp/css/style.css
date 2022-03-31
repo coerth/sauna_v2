@@ -1,0 +1,32 @@
+/* CSS stylesheet til bibliotek */
+
+table {
+    border-collapse: collapse;
+    border: 1px solid silver;
+    padding:15px;
+}
+
+th, td {
+    border: 1px solid silver;
+    padding:15px;
+}
+
+.card
+{
+    width: 18rem;
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.card-body {
+}
+
+.saunadrengene
+{
+    position: absolute;
+}
+
+
+
+
