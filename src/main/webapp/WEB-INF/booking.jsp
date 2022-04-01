@@ -23,7 +23,6 @@
     <jsp:body>
         <p>Book her </p>
 
-
         <c:forEach items="${applicationScope.eventArrayList}" var="item" >
 
         <div class="card">
@@ -61,7 +60,8 @@
                                 <input type="text" id="mobile" name="mobile" placeholder="mobilnr" required><br><br>
                                 <br>
                                 <input type="hidden" name="saunaevent" value="${item.eventID}" />
-                                <input type="submit" type="submit" value="Confirm" class="btn btn-primary" ></input>
+                                <input type="submit" type="submit" value="Confirm" class="btn btn-primary" >
+                                </input>
 
                             </form>
                         </div>
@@ -75,6 +75,7 @@
 
         </c:forEach>
         <br>
+
 
 
 
